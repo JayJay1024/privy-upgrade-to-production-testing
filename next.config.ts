@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
       source: "/(.*)",
       headers: [
         { key: "Content-Security-Policy", value: cspHeader.replace(/\n/g, "") },
+        { key: "X-Frame-Options", value: "none" },
       ],
     },
   ],
